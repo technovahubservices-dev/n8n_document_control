@@ -1,6 +1,11 @@
 ﻿const fileInput = document.getElementById('fileInput');
 const runBtn = document.getElementById('runBtn');
-const endpoint = "http://192.168.1.108:5678/webhook/analyze-document"; 
+// Toggle this during development vs deployment
+const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+
+const endpoint = isProduction 
+    ? "https://your-cloud-n8n-url.com/webhook/analyze-document" 
+    : "http://192.168.1.108:5678/webhook/analyze-document";
 
 // Helper function to show the "Email Sent" toast
 function showEmailToast() {
