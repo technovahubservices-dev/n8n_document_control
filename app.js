@@ -1,6 +1,6 @@
 ﻿const fileInput = document.getElementById('fileInput');
 const runBtn = document.getElementById('runBtn');
-const endpoint = "http://localhost:5678/webhook/analyze-document";
+const endpoint = "http://localhost:5678/webhook/analyze-document"; 
 
 // Helper function to show the "Email Sent" toast
 function showEmailToast() {
